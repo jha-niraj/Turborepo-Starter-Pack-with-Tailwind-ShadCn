@@ -1,5 +1,5 @@
 {
-	"name": "turboeventeye",
+	"name": "eventeye",
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
