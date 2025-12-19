@@ -2,13 +2,23 @@
 	"$schema": "https://turborepo.com/schema.json",
 	"ui": "tui",
 	"tasks": {
+		"generate": {
+			"cache": false,
+			"inputs": [
+				"prisma/schema.prisma"
+			],
+			"outputs": [
+				"../../node_modules/.prisma/client/**"
+			]
+		},
 		"build": {
 			"dependsOn": [
-				"^build",
-				"generate"
+				"^generate",
+				"^build"
 			],
 			"env": [
-				"DATABASE_URL"
+				"DATABASE_URL",
+				"DIRECT_URL"
 			],
 			"inputs": [
 				"$TURBO_DEFAULT$",
