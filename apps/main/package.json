@@ -12,8 +12,8 @@
     },
     "dependencies": {
         "@prisma/client": "6.14.0",
-        "@repo/database": "workspace:*",
         "@repo/ui": "workspace:*",
+        "@repo/prisma": "workspace:*",
         "@tailwindcss/postcss": "^4.1.18",
         "next": "15.4.10",
         "postcss": "^8.5.6",

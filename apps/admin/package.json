@@ -12,8 +12,8 @@
 	},
 	"dependencies": {
 		"@prisma/client": "6.14.0",
-		"@repo/database": "workspace:*",
 		"@repo/ui": "workspace:*",
+		"@repo/prisma": "workspace:*",
 		"next": "15.4.10",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0"

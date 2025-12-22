@@ -1,15 +1,24 @@
 "use server"
 
-import { prisma } from "@repo/database"
+import prisma from "@repo/prisma"
 
 export async function insertUser() {
     try {
-        await prisma.user.create({
+        const user = await prisma.user.create({
             data: {
                 id: "1234",
                 name: "Niraj Jha",
                 email: "niraj@gmail.com",
-                password: "nirajjha"
+                address: "Nepal"
+            }
+        })
+
+        await prisma.post.create({
+            data: {
+                title: "Hey",
+                content: "Hello",
+                published: true,
+                authorId: user?.id
             }
         })
 
