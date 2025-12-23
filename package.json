@@ -1,5 +1,5 @@
 {
-	"name": "eventeye",
+	"name": "starterpack-turbo",
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
