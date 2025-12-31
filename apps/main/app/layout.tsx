@@ -3,6 +3,7 @@ import "@repo/ui/styles/globals.css";
 import { ThemeProvider } from "@repo/ui/components/themeprovider";
 import { Geist, Space_Grotesk, Geist_Mono } from "next/font/google";
 import { Toaster as SonnerToaster } from "@repo/ui/components/ui/sonner";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -93,15 +94,17 @@ export default function RootLayout({
 			<body className={`
 				${spaceGrotesk.className} ${geistSans.variable} ${geistMono.variable} antialiased 
 			`}>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					{children}
-					<SonnerToaster position="top-center" closeButton richColors />
-				</ThemeProvider>
+				<Providers>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						{children}
+						<SonnerToaster position="top-center" closeButton richColors />
+					</ThemeProvider>
+				</Providers>
 			</body>
 		</html>
 	);

@@ -1,7 +1,6 @@
 "use client"
 
 import { Button } from "@repo/ui/components/ui/button";
-import { insertUser } from "../actions/user.action";
 import { toast } from "@repo/ui/components/ui/sonner";
 import { ThemeToggle } from "@repo/ui/components/themetoggle";
 
